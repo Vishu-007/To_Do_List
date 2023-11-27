@@ -1,0 +1,21 @@
+<%- include("headers.html"); -%>
+
+
+    <div class="box" id="heading">
+        <h1> <%=date%></h1>
+    </div>
+ <div class="box">
+
+        <% for(var i=0;i<newitems.length; i++){ %>
+          <div class="item">
+            <input type="checkbox">
+             <p> <%= newitems[i] %> <p>
+            </div>
+        <%}%>
+        <form action="/" class="item" method="post">
+            <input type="text" name="listitem" placeholder="New Item" autocomplete="off" required autofocus>
+            <button type="submit">+</button>
+         </form>
+ </div>
+
+ <%- include("footers.html"); -%>
